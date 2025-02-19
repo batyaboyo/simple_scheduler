@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  scheduler:
+    build: .
+    volumes:
+      - ./main:/app/main
+      - ./tests:/app/tests
+    environment:
+      - TOTAL_CPU=4
+      - TOTAL_MEMORY=16
+
